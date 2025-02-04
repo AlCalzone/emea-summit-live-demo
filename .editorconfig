@@ -1,0 +1,7 @@
+[*.mjs]
+indent_size = 4
+indent_style = tab
+
+[README.md]
+indent_size = 4
+indent_style = tab
