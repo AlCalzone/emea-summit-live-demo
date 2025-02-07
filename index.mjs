@@ -1,7 +1,6 @@
 // @ts-check
 
 import { Driver } from "zwave-js";
-import { Bytes } from "@zwave-js/shared";
 
 // Tell the driver which serial port to use
 const driver = new Driver(
@@ -9,26 +8,26 @@ const driver = new Driver(
 	// and configure options like security keys
 	{
 		securityKeys: {
-			S0_Legacy: Bytes.from("0102030405060708090a0b0c0d0e0f10", "hex"),
-			S2_Unauthenticated: Bytes.from(
+			S0_Legacy: Buffer.from("0102030405060708090a0b0c0d0e0f10", "hex"),
+			S2_Unauthenticated: Buffer.from(
 				"5369389EFA18EE2A4894C7FB48347FEA",
 				"hex"
 			),
-			S2_AccessControl: Bytes.from(
+			S2_AccessControl: Buffer.from(
 				"31132050077310B6F7032F91C79C2EB8",
 				"hex"
 			),
-			S2_Authenticated: Bytes.from(
+			S2_Authenticated: Buffer.from(
 				"656EF5C0F020F3C14238C04A1748B7E1",
 				"hex"
 			),
 		},
 		securityKeysLongRange: {
-			S2_Authenticated: Bytes.from(
+			S2_Authenticated: Buffer.from(
 				"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
 				"hex"
 			),
-			S2_AccessControl: Bytes.from(
+			S2_AccessControl: Buffer.from(
 				"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
 				"hex"
 			),
