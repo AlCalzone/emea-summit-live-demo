@@ -1,6 +1,22 @@
 # README
 
-## First steps
+## First steps (when cloning the repository)
+
+1. Install Z-Wave JS
+
+    ```
+    npm install
+    ```
+
+2. Run the script
+
+    ```
+    node index.mjs
+    ```
+
+## First steps (without cloning the repository)
+
+These are not required when cloning this repository!
 
 1. Initialize project
 
@@ -8,15 +24,13 @@
     npm init -y
     ```
 
-2. Install Z-Wave JS
-
     ```
     npm install zwave-js
     ```
 
-3. Create a new script file `index.mjs`
+2. Create a new script file `index.mjs`
 
-4. Copy boilerplate
+3. Copy boilerplate
 
     ```ts
     // @ts-check
@@ -85,7 +99,7 @@
     }
     ```
 
-5. Run the script
+4. Run the script
 
     ```
     node index.mjs
@@ -131,9 +145,7 @@ const colors = [
 ];
 
 for (let i = 0; i < 12; i++) {
-	await node.commandClasses["Color Switch"].set(
-		colors[i % colors.length]
-	);
+	await node.commandClasses["Color Switch"].set(colors[i % colors.length]);
 	await setTimeout(250);
 }
 
